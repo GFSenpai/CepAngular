@@ -1,0 +1,47 @@
+<div class="logo">
+  <img src="../assets/img/techdogLOGO.png" width="70px">
+  <img src="../assets/img/techdog.png" width="100px">
+</div>
+
+<form #f="ngForm">
+  <mat-card class="card">
+    <mat-card-header class="header">
+      <div class="title">Busca CEP</div>
+    </mat-card-header>
+    <mat-card-content class="content">
+
+
+  <div class="Form-group">
+
+    <label for="cep">CEP:</label><br>
+    <input type="text" class="Form-control" id="cep" name="cep" maxlength="9" ngModel #cep="ngModel" (blur)="consultaCep(cep.value , f)">
+
+    <br><br>
+    <label for="logradouro">Endereço:</label><br>
+    <input type="text" class="Form-control" id="logradouro" name="logradouro" ngModel #logradouro="ngModel" placeholder="..." disabled>
+
+    <br><br>
+    <label for="Numero">Número:</label><br>
+    <input type="number">
+
+    <br><br>
+    <label for="bairro">Bairro:</label><br>
+    <input type="text" class="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel" placeholder="..." disabled>
+
+    <br><br>
+    <label for="cidade">Cidade:</label><br>
+    <input type="text" class="Form-control" id="cidade" name="cidade" ngModel #cidade="ngModel" placeholder="..." disabled>
+
+    <br><br>
+    <label for="uf">UF:</label><br>
+    <input type="text" class="Form-control" id="uf" name="uf" ngModel #uf="ngModel" placeholder="..." disabled>
+
+    <br><br>
+    <label for="ibge">IBGE:</label><br>
+    <input type="text" class="Form-control" id="ibge" name="ibge" ngModel #ibge="ngModel" placeholder="..." disabled>
+  </div>
+</mat-card-content>
+</mat-card>
+
+<button mat-raised-button class="reset" color="accent" type="reset" (click)="limparCEP()">Limpar</button>
+</form>
